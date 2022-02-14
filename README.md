@@ -1,34 +1,51 @@
-# vuejs-commerce
+<p align="center">
+  <h3 align="center">Starter with Vue 3 + Vite 2 + TypeScript + Jest + ESLint + Prettier</h3>
+  <p align="center">
+    Start a new project really fast with great defaults. 🚀
+    <br>
+  </p>
+</p>
 
-## Project setup
-```
-yarn install
-```
+## Development
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+Using `yarn`
 
-### Compiles and minifies for production
-```
-yarn build
-```
+1. Install dependencies
 
-### Run your unit tests
-```
-yarn test:unit
+```sh
+yarn
 ```
 
-### Run your end-to-end tests
+2. Run the project in development mode
+
 ```
-yarn test:e2e
+yarn dev
 ```
 
-### Lints and fixes files
+3. Lint the project
+
 ```
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Run tests
+
+Run unit tests once
+
+```sh
+yarn test:unit
+```
+
+Run unit tests in watch mode
+
+```sh
+yarn test:unit -- --watch
+```
+
+## Build for production
+
+Build production mode
+
+```
+yarn build
+```

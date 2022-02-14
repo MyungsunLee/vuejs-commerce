@@ -1,6 +1,16 @@
+const { pathsToModuleNameMapper } = require('ts-jest');
+const { compilerOptions } = require('./tsconfig');
+
 module.exports = {
-  preset: '@vue/cli-plugin-unit-jest/presets/typescript-and-babel',
+  moduleDirectories: ['node_modules', 'src'],
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.vue$': 'vue-jest',
+    '^.+\\.vue$': '@vue/vue3-jest',
+    '^.+\\js$': 'babel-jest',
+    '^.+\\.ts$': 'ts-jest',
   },
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)$',
+  moduleFileExtensions: ['vue', 'js', 'ts'],
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
 };
